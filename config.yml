@@ -1,0 +1,63 @@
+baseurl: /
+languageCode: en-us
+theme: papermod
+title: Fesq
+paginate: 5
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+params:
+  env: production
+  author: Festum
+  keywords: [Software Developer, Go, Golang, Gopher, Blog, Portfolio]
+  DateFormat: 2006-01-02
+  defaultTheme: dark
+  disableThemeToggle: false
+  favicon: favicon.ico
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowShareButtons: false
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  comments: true
+
+  homeInfoParams:
+    # Title: 夜露死苦
+    Content: It is a great honor to welcome your visting, I am just a [Zako](https://jlearn.net/dictionary/%E9%9B%91%E9%AD%9A) after all.
+
+  profileMode:
+    enabled: false
+
+  socialIcons:
+  - name: telegram
+    url: https://fesqin.t.me
+  - name: linkedin
+    url: https://linkedin.com/in/festum
+  - name: twitter
+    url: https://twitter.com/festum
+
+
+  cover:
+    responsiveImages: false # Speedup
+    # linkFullImages: true
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+  label:
+    text: "Home"
+    # icon: /apple-touch-icon.png
+    # iconHeight: 35
