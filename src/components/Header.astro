@@ -1,0 +1,55 @@
+---
+interface Props {
+  variant?: 'solid' | 'transparent';
+}
+
+const { variant = 'solid' } = Astro.props;
+const pathname = Astro.url.pathname;
+
+const navLinks = [
+  { label: 'Journal', href: '/', internal: true },
+  { label: 'Products', href: 'https://fesq.in/products/', internal: false },
+  { label: 'About', href: 'https://fesq.in/about/', internal: false },
+  { label: 'Contact', href: 'https://fesq.in/contact/', internal: false },
+];
+
+const linkClass = (href: string, internal: boolean) => {
+  const active = internal && pathname === href;
+  return active ? 'text-champagne' : 'text-mist hover:text-champagne transition-colors';
+};
+---
+
+<header
+  class:list={[
+    'z-40 w-full',
+    variant === 'solid'
+      ? 'sticky top-0 backdrop-blur bg-ink/70 border-b border-ink-line'
+      : 'absolute top-0 left-0',
+  ]}
+>
+  <div class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+    <a href="/" class="font-display tracking-[0.35em] text-champagne text-lg">FESQ</a>
+
+    <nav class="hidden md:block">
+      <ul class="flex items-center gap-8">
+        {navLinks.map((link) => (
+          <li><a href={link.href} class={linkClass(link.href, link.internal)}>{link.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <input type="checkbox" id="nav-toggle" class="peer sr-only" />
+    <label for="nav-toggle" aria-label="Menu" class="md:hidden cursor-pointer p-2 text-mist hover:text-champagne">
+      <span class="block w-5 h-px bg-current mb-1"></span>
+      <span class="block w-5 h-px bg-current mb-1"></span>
+      <span class="block w-5 h-px bg-current"></span>
+    </label>
+    <nav class="hidden peer-checked:block absolute left-0 top-full w-full bg-ink border-b border-ink-line md:hidden">
+      <ul class="mx-auto max-w-6xl px-6 py-4 flex flex-col gap-4">
+        {navLinks.map((link) => (
+          <li><a href={link.href} class={linkClass(link.href, link.internal)}>{link.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>

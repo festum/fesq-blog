@@ -1,0 +1,19 @@
+---
+import { type CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'blog'>;
+}
+
+const { entry } = Astro.props;
+---
+
+<article>
+  <a href={`/${entry.id}/`} class="group block border border-ink-line bg-ink-raised p-8 hover:border-champagne/60 transition-colors">
+    <time class="text-xs text-mist" datetime={entry.data.pubDate.toISOString()}>
+      {entry.data.pubDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+    </time>
+    <h2 class="font-display text-2xl mt-3 text-paper group-hover:text-champagne transition-colors">{entry.data.title}</h2>
+    <p class="text-mist mt-3">{entry.data.description}</p>
+  </a>
+</article>

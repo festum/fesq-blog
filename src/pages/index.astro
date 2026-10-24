@@ -1,0 +1,29 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Eyebrow from '../components/Eyebrow.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+
+const entries = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout
+  title="Journal"
+  description="Notes from an independent research group."
+>
+  <section class="py-24 md:py-32">
+    <div class="mx-auto max-w-3xl px-6">
+      <Eyebrow text="Journal" />
+      <h1 class="font-display text-5xl mt-6">Notes from the lab.</h1>
+
+      {entries.length === 0 ? (
+        <p class="text-mist mt-12">Posts coming soon.</p>
+      ) : (
+        <div class="flex flex-col gap-6 mt-12">
+          {entries.map((entry) => <ArticleCard entry={entry} />)}
+        </div>
+      )}
+    </div>
+  </section>
+</BaseLayout>
