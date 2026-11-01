@@ -46,6 +46,21 @@
   .prose-article strong {
     @apply text-champagne-soft;
   }
+  .prose-article img {
+    @apply my-8 w-full rounded-sm border border-ink-line;
+  }
+  .prose-article p:has(> img) + p {
+    @apply -mt-4 text-sm text-mist;
+  }
+  .prose-article p:has(> img) + p em {
+    @apply not-italic;
+  }
+  .prose-article code {
+    @apply rounded bg-ink-raised px-1.5 py-0.5 text-[0.9em] text-champagne-soft;
+  }
+  .prose-article pre {
+    @apply my-6 overflow-x-auto rounded-sm border border-ink-line bg-ink-raised p-4 text-[0.85em] leading-relaxed text-paper/80;
+  }
 }
 
 .starfield-glow {

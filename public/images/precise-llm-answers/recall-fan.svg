@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6" fill="none" stroke="#cfae70" stroke-width="1.4"/>
+    </marker>
+  </defs>
+  <rect width="1400" height="800" fill="#0a0a0d"/>
+  <text x="700" y="86" text-anchor="middle" font-family="Georgia, serif" font-size="46" fill="#f0ebe1">One question, four searches</text>
+  <text x="700" y="126" text-anchor="middle" font-size="19" fill="#9c9cab">recall() fans out in parallel, fuses by rank, reranks locally — no LLM on the read path</text>
+
+  <!-- query -->
+  <rect x="50" y="350" width="230" height="110" rx="10" fill="#13131c" stroke="#cfae70" stroke-width="1.5"/>
+  <text x="165" y="395" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#e8d5ac">recall()</text>
+  <text x="165" y="425" text-anchor="middle" font-size="15" fill="#9c9cab">query + temporal window</text>
+  <text x="165" y="446" text-anchor="middle" font-size="15" fill="#9c9cab">181 calls = 4.8K tokens</text>
+
+  <!-- four arms -->
+  <g stroke="#cfae70" stroke-width="1.3" fill="none">
+    <path d="M280 405 L340 405 L340 190 L420 190" marker-end="url(#arrow)"/>
+    <path d="M280 405 L340 405 L340 335 L420 335" marker-end="url(#arrow)"/>
+    <path d="M280 405 L340 405 L340 545 L420 545" marker-end="url(#arrow)"/>
+    <path d="M280 405 L340 405 L340 690 L420 690" marker-end="url(#arrow)"/>
+  </g>
+
+  <g>
+    <rect x="420" y="145" width="320" height="92" rx="10" fill="#13131c" stroke="#24242f" stroke-width="1.5"/>
+    <text x="440" y="182" font-size="22" fill="#f0ebe1">Semantic</text>
+    <text x="440" y="212" font-size="15" fill="#9c9cab">embedding match over vectors</text>
+
+    <rect x="420" y="290" width="320" height="92" rx="10" fill="#13131c" stroke="#24242f" stroke-width="1.5"/>
+    <text x="440" y="327" font-size="22" fill="#f0ebe1">Keyword</text>
+    <text x="440" y="357" font-size="15" fill="#9c9cab">BM25 — the error-code rescuer</text>
+
+    <rect x="420" y="500" width="320" height="92" rx="10" fill="#13131c" stroke="#24242f" stroke-width="1.5"/>
+    <text x="440" y="537" font-size="22" fill="#f0ebe1">Graph</text>
+    <text x="440" y="567" font-size="15" fill="#9c9cab">entity hops, 100–1000 node budget</text>
+
+    <rect x="420" y="644" width="320" height="92" rx="10" fill="#13131c" stroke="#cfae70" stroke-width="1.5"/>
+    <text x="440" y="681" font-size="22" fill="#e8d5ac">Temporal</text>
+    <text x="440" y="711" font-size="15" fill="#9c9cab">8 time buckets — ranks, not filters</text>
+  </g>
+
+  <!-- fusion + rerank -->
+  <g stroke="#9c9cab" stroke-width="1.3" fill="none">
+    <path d="M740 191 L800 191 L800 395 L840 395" marker-end="url(#arrow)"/>
+    <path d="M740 336 L800 336 L800 395" />
+    <path d="M740 546 L800 546 L800 415" />
+    <path d="M740 690 L800 690 L800 415" />
+  </g>
+  <rect x="840" y="350" width="200" height="110" rx="10" fill="#13131c" stroke="#24242f" stroke-width="1.5"/>
+  <text x="940" y="395" text-anchor="middle" font-size="22" fill="#f0ebe1">RRF fusion</text>
+  <text x="940" y="425" text-anchor="middle" font-size="15" fill="#9c9cab">rank, don't score</text>
+
+  <path d="M1040 405 L1090 405" stroke="#9c9cab" stroke-width="1.3" fill="none" marker-end="url(#arrow)"/>
+  <rect x="1090" y="350" width="260" height="110" rx="10" fill="#13131c" stroke="#24242f" stroke-width="1.5"/>
+  <text x="1220" y="392" text-anchor="middle" font-size="22" fill="#f0ebe1">Cross-encoder</text>
+  <text x="1220" y="420" text-anchor="middle" font-size="15" fill="#9c9cab">rerank on local CPU</text>
+  <text x="1220" y="443" text-anchor="middle" font-size="15" fill="#9c9cab">MiniLM, in-process</text>
+
+  <text x="700" y="782" text-anchor="middle" font-size="17" fill="#cfae70">The temporal arm is why “last month” lands on last month.</text>
+</svg>
