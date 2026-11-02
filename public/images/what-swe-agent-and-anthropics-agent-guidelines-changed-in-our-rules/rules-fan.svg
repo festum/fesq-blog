@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" font-family="Inter, system-ui, sans-serif">
+  <rect x="0" y="0" width="1200" height="760" fill="#0a0a0d"/>
+  <text x="60" y="60" font-size="18" fill="#cfae70">One source, ten readers</text>
+
+  <rect x="60" y="140" width="300" height="160" rx="6" fill="#13131c" stroke="#24242f"/>
+  <text x="210" y="205" font-size="26" fill="#f0ebe1" text-anchor="middle">system/rules.md</text>
+  <text x="210" y="235" font-size="15" fill="#9c9cab" text-anchor="middle">162 lines · 10 sections</text>
+  <text x="210" y="262" font-size="14" fill="#9c9cab" text-anchor="middle">festum/ai-rules</text>
+
+  <path d="M360,220 C460,220 460,122 560,122" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,178 560,178" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,234 560,234" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,290 560,290" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,346 560,346" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,402 560,402" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,458 560,458" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,514 560,514" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,570 560,570" fill="none" stroke="#9c9cab" stroke-opacity="0.35" stroke-width="1.5"/>
+  <path d="M360,220 C460,220 460,626 560,626" fill="none" stroke="#cfae70" stroke-width="1.5"/>
+
+  <rect x="560" y="100" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="128" font-size="16" fill="#f0ebe1">~/AGENTS.md</text>
+
+  <rect x="560" y="156" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="184" font-size="16" fill="#f0ebe1">~/.claude/CLAUDE.md</text>
+
+  <rect x="560" y="212" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="240" font-size="16" fill="#f0ebe1">~/.config/zed/AGENTS.md</text>
+
+  <rect x="560" y="268" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="296" font-size="16" fill="#f0ebe1">~/.github/copilot-instructions.md</text>
+
+  <rect x="560" y="324" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="352" font-size="16" fill="#f0ebe1">~/.codex/memories/global_rules.md</text>
+
+  <rect x="560" y="380" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="408" font-size="16" fill="#f0ebe1">~/.cursor/memories/global_rules.md</text>
+
+  <rect x="560" y="436" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="464" font-size="16" fill="#f0ebe1">~/.continue/rules/ai-rules.md</text>
+
+  <rect x="560" y="492" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="520" font-size="16" fill="#f0ebe1">~/.config/opencode/AGENTS.md</text>
+
+  <rect x="560" y="548" width="330" height="44" rx="4" fill="#13131c" stroke="#24242f"/>
+  <text x="574" y="576" font-size="16" fill="#f0ebe1">~/.omp/agent/AGENTS.md</text>
+
+  <rect x="560" y="604" width="330" height="44" rx="4" fill="#13131c" stroke="#cfae70"/>
+  <text x="574" y="632" font-size="16" fill="#cfae70">~/.hermes/SOUL.md</text>
+
+  <text x="906" y="115" font-size="14" fill="#9c9cab">nine coding tools</text>
+  <text x="906" y="631" font-size="14" fill="#9c9cab">controller contract</text>
+</svg>
