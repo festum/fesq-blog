@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 800" width="1400" height="800" font-family="Inter, Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="1400" height="800" fill="#0a0a0d"/>
+  <text x="700" y="52" text-anchor="middle" font-size="24" fill="#f0ebe1" letter-spacing="2">SEVEN SHIZUKU FORKS, TWO AXES</text>
+
+  <rect x="160" y="110" width="1080" height="530" fill="#13131c" stroke="#24242f" stroke-width="2"/>
+
+  <line x1="160" y1="640" x2="1240" y2="640" stroke="#9c9cab" stroke-width="2"/>
+  <line x1="160" y1="110" x2="160" y2="640" stroke="#9c9cab" stroke-width="2"/>
+
+  <text x="160" y="700" text-anchor="start" font-size="18" fill="#9c9cab">one-time setup</text>
+  <text x="1240" y="700" text-anchor="end" font-size="18" fill="#9c9cab">constant maintenance</text>
+  <text x="700" y="765" text-anchor="middle" font-size="18" fill="#cfae70" letter-spacing="1">SETUP EFFORT</text>
+  <text x="100" y="375" text-anchor="middle" font-size="16" fill="#cfae70" letter-spacing="1" transform="rotate(-90 100 375)">API SURFACE</text>
+  <text x="145" y="118" text-anchor="end" font-size="16" fill="#9c9cab">broad</text>
+  <text x="145" y="648" text-anchor="end" font-size="16" fill="#9c9cab">narrow</text>
+
+  <circle cx="322" cy="216" r="10" fill="#cfae70"/>
+  <text x="338" y="223" font-size="22" fill="#f0ebe1">Shizuku-Next</text>
+
+  <circle cx="721" cy="152" r="10" fill="#cfae70"/>
+  <text x="737" y="159" font-size="22" fill="#f0ebe1">ShizukuPlus</text>
+
+  <circle cx="290" cy="333" r="10" fill="#cfae70"/>
+  <text x="306" y="340" font-size="22" fill="#f0ebe1">Nightzuku</text>
+
+  <circle cx="614" cy="375" r="10" fill="none" stroke="#f0ebe1" stroke-width="3"/>
+  <text x="630" y="382" font-size="22" fill="#f0ebe1">Shizako</text>
+
+  <circle cx="754" cy="312" r="10" fill="none" stroke="#f0ebe1" stroke-width="3"/>
+  <text x="770" y="319" font-size="22" fill="#f0ebe1">Shevery</text>
+
+  <circle cx="808" cy="481" r="10" fill="#cfae70"/>
+  <text x="824" y="488" font-size="22" fill="#f0ebe1">Stellar</text>
+
+  <circle cx="1002" cy="524" r="10" fill="none" stroke="#f0ebe1" stroke-width="3"/>
+  <text x="1018" y="531" font-size="22" fill="#f0ebe1">Porter</text>
+
+  <circle cx="172" cy="723" r="9" fill="#cfae70"/>
+  <text x="192" y="730" font-size="16" fill="#f0ebe1">documents an automatic start after a reboot</text>
+  <circle cx="640" cy="723" r="9" fill="none" stroke="#f0ebe1" stroke-width="3"/>
+  <text x="660" y="730" font-size="16" fill="#f0ebe1">no reboot start documented</text>
+</svg>
